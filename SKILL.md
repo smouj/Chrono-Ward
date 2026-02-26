@@ -1,59 +1,45 @@
 ---
-name: chrono-ward
-description: "⏳ Detección de drift temporal."
+name: Chrono Ward
+description: "⏳ Temporal drift guardian for recurring tasks with proactive replanning."
+when: "When a user request matches chrono-ward capabilities or requires this domain-specific workflow."
+examples:
+  - "Run Chrono Ward for this task"
+  - "Apply Chrono Ward to solve this workflow"
 metadata:
-  {
-    "openclaw": {
-      "emoji": "⏳",
-      "version": "0.2.0",
-      "author": "smouj",
-      "lang_default": "en"
-    }
-  }
+  openclaw:
+    requires: ["fs_read", "fs_write", "shell_exec", "memory_search"]
+  safety_level: high
+  version: "1.0.0"
+  author: "smouj"
+  tags: ["chrono-ward", "automation", "openclaw-skill"]
 ---
 
 # ⏳ Chrono Ward
 
 ## Purpose
-Detector de drift temporal en tareas recurrentes para forzar re-planificación proactiva cuando cambian condiciones, datos o supuestos.
+Guardián temporal: detecta drift en tareas repetitivas, fuerza re-planificación proactiva y conserva histórico de cambios.
 
-## Tags
-- security
-- reliability
-- automation
-- openclaw-skill
+## How to Use / Core Instructions
+1. Primero piensa en alcance, riesgo y coste.
+2. Luego valida inputs y dependencias mínimas.
+3. Ejecuta en pasos pequeños y reversibles.
+4. Verifica resultado con checks explícitos.
+5. Si hay error, falla seguro y reporta causa + próximo paso.
 
-## Execution contract
-1. Validate request and constraints.
-2. Generate minimal safe plan.
-3. Execute in reversible steps.
-4. Verify with explicit checks.
-5. Return concise summary + next actions.
+## Security & Safety Guidelines
+Nunca ejecutes código sospechoso sin sandbox. Reporta riesgos al usuario. No envíes datos sensibles fuera del entorno local.
 
-## Inputs expected
-- Goal
-- Constraints (time/cost/privacy)
-- Optional files/URLs
+## Tools Required
+- fs_read
+- fs_write
+- shell_exec
+- memory_search
 
-## Outputs
-- Plan
-- Actions executed
-- Verification results
-- Rollback notes
+## Example Flows
+- Entrada -> validación -> plan -> ejecución -> verificación -> reporte.
+- Reintento controlado con rollback si falla.
 
-## Guardrails
-- Never expose secrets.
-- No destructive operation without explicit confirmation.
-- Fail safe with actionable diagnostics.
-
-## Commands
-```bash
-# Placeholder entrypoint
-printf "chrono-ward: validate -> execute -> verify\n"
-```
-
-## Test checklist
-- [ ] Happy path
-- [ ] Error handling
-- [ ] Idempotency
-- [ ] Guardrails respected
+## Edge Cases & Error Handling
+- Input incompleto: pedir datos mínimos.
+- Dependencia ausente: degradar en modo seguro.
+- Error persistente: detener, registrar y escalar.
