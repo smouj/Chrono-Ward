@@ -2,7 +2,7 @@
 name: chrono-ward
 description: >
   Chrono Ward skill for planning operations in multi-agent ecosystems. Use when tasks require planning analysis, automation, and safe execution workflows.
-version: "1.0.0"
+version: "1.0.1"
 tags: [planning, ai-agents, openclaw]
 metadata:
   author: smouj
