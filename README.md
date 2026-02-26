@@ -4,21 +4,33 @@
   <img src="https://img.shields.io/badge/Skill-Chrono%20Ward-111827?style=for-the-badge&logo=github" alt="Chrono Ward badge" />
 </p>
 
-<p align="center">
-  <img src="https://img.shields.io/badge/Status-Initiating-22d3ee?style=flat-square" alt="status" />
-  <img src="https://img.shields.io/badge/Dificultad-Media-8b5cf6?style=flat-square" alt="dificultad" />
-</p>
+## Overview
+Detector de drift temporal en tareas recurrentes para forzar re-planificación proactiva cuando cambian condiciones, datos o supuestos.
 
-## Purpose
-Detecta drift temporal en tareas repetitivas y fuerza re-planificación.
+## Why this skill matters
+- Reduce operational friction with reusable agent logic.
+- Provide deterministic, auditable behavior.
+- Keep execution local-first and security-aware.
+
+## Quick Start
+```bash
+# clone
+
+git clone https://github.com/smouj/Chrono-Ward.git
+cd Chrono-Ward
+
+# open docs
+cat SKILL.md
+```
 
 ## Status
 Initiating
 
-## Dificultad
+## Difficulty
 Media
 
-## Próximos pasos
-- Crear SKILL.md con formato OpenClaw estándar
-- Implementar la lógica principal
-- Testear en agente local
+## Roadmap
+- [ ] Finalize SKILL.md behavior contract
+- [ ] Implement core logic (v0)
+- [ ] Add test fixtures
+- [ ] Publish first stable tag
