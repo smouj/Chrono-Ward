@@ -9,42 +9,31 @@
   <a href="./README.es.md"><img src="https://img.shields.io/badge/README-Español-c92a2a?style=for-the-badge" alt="Español"></a>
 </p>
 
-<p align="center"><em>⏳ Detección de drift temporal.</em></p>
-
----
-
 ## Overview
-Detector de drift temporal en tareas recurrentes para forzar re-planificación proactiva cuando cambian condiciones, datos o supuestos.
+Temporal drift guardian for recurring tasks with proactive replanning.
 
-## Architecture of understanding
-```mermaid
-flowchart LR
-  A[Input goal] --> B[Scope check]
-  B --> C[Plan minimal steps]
-  C --> D[Execute safely]
-  D --> E[Verify outcomes]
-  E --> F[Report + next steps]
-```
+## Purpose
+Guardián temporal: detecta drift en tareas repetitivas, fuerza re-planificación proactiva y conserva histórico de cambios.
 
 ## Installation
 ```bash
 git clone https://github.com/smouj/Chrono-Ward.git
 cd Chrono-Ward
-# read the contract
 cat SKILL.md
 ```
 
-## Quick usage
-```bash
-# Example placeholder command
-printf "running chrono-ward...\n"
+## Architecture (understanding)
+```mermaid
+flowchart LR
+  A[Input] --> B[Validate scope]
+  B --> C[Plan safe steps]
+  C --> D[Execute]
+  D --> E[Verify]
+  E --> F[Report]
 ```
 
-## Badges
-- Status: Initiating
-- Difficulty: Media
+## Status
+Initiating
 
-## Roadmap
-- [ ] Implement core logic v0
-- [ ] Add integration tests
-- [ ] Publish stable tag v1.0.0
+## Difficulty
+Media
